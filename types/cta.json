@@ -1,0 +1,28 @@
+{
+  "key": "cta",
+  "name": "cta",
+  "attributes": [
+    {
+      "name": "link",
+      "type": "link"
+    },
+    {
+      "name": "label",
+      "type": "string"
+    },
+    {
+      "name": "style",
+      "type": "select",
+      "options": [
+        {
+          "label": "primary",
+          "value": "btn-primary"
+        },
+        {
+          "label": "secondary",
+          "value": "btn-secondary"
+        }
+      ]
+    }
+  ]
+}
