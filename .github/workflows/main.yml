@@ -11,4 +11,4 @@ jobs:
         env:
           EASOL_KEY: ${{ secrets.EASOL_KEY }}
           EASOL_SECRET: ${{ secrets.EASOL_SECRET }}
-          THEME_KEY: '<THEME_KEY>'
+          THEME_KEY: 'studio'
