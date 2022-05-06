@@ -1,4 +1,8 @@
-{
+{ 
+  "one-col-text": {
+    "name": "Text",
+    "category": "Content"
+  },
   "featured-products": {
     "name": "Featured Products",
     "category": "Display Experiences"
@@ -21,10 +25,6 @@
   },
   "one-col-img": {
     "name": "Image",
-    "category": "Content"
-  },
-  "one-col-text": {
-    "name": "Text",
     "category": "Content"
   },
   "one-col-vid": {
