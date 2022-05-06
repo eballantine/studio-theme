@@ -1,9 +1,154 @@
 ---
-text:
+Background_Image:
+    group: design
+    label: Background image
+    hint: Recommended minimum width 1920px.
+    type: Image
+Background_Color:
+    group: design
+    label: Background colour
+    type: String
+    default: {{ Background_Color }} <!-- can I use theme colors here? -->
+Text_Color:
+    group: design
+    label: Text colour
+    type: String
+    default: {{ Primary_Color }} <!-- can I use theme colors here? -->
+Button_Color:
+    group: design
+    label: Button colour
+    type: String
+Text_Align:
+    group: layout
+    label: Center header and text
+    type: select
+    default: opt_1
+    options:
+        - label: Left Align
+          value: opt_1
+        - label: Center
+          value: opt_2
+        - label: Justify (line all same width)
+          value: opt_3
+        - label: Right Align
+          value: opt_4
+Header:
     group: content
-    label: Heading
-    type: text
-    default: Give a heading about some stuff
+    label: Header
+    type: String
+    default: Make your moments stand out
+Text:
+    group: content
+    label: Text
+    type: Text
+    default: <p>Creating experiences is an art. Whether you’re launching a new idea to share your passion with the world, or maybe you’re taking your business to the next level. No matter what you are building – carefully craft every moment of your story online. Brands built with love are the ones that stand out.</p>
+Show_Button:
+    group: content
+    label: Display button
+    type: Boolean
+    default: true
+Button_Text:
+    group: content
+    label: Button text
+    type: String
+    default: LEARN MORE
+Button_Link:
+    group: content
+    label: Button link
+    type: link
+Narrow_Width:
+    group: layout
+    label: Reduce width of text
+    type: Boolean
+Full_Width:
+    group: layout
+    label: Increase width of text
+    type: Boolean
+padding_top:
+    group: design
+    label: Block padding top
+    type: range
+    min: 0
+    max: 500
+    step: 10
+    default: 80
+    unit: px
+padding_bottom:
+    group: design
+    label: Block padding bottom
+    type: range
+    min: 0
+    max: 500
+    step: 10
+    default: 80
+    unit: px
 ---
 
-<h1>{{text}}</h1>
+{% style %}
+    #{{block.id}} .block-container {
+        padding-top: {{padding_top}}px;
+        padding-bottom: {{padding_bottom}}px;
+    {% if Background_Image %} 
+        background-image: url('{{Background_Image.xxlarge_url}}'); 
+        background-repeat: no-repeat; 
+        background-size: cover; 
+        background-position: center;
+    {% endif %} 
+    {% if Text_Color %}
+        color: {{ Text_Color }};
+    {% endif %} 
+    {% if Background_Color %}
+        background-color: {{ Background_Color }};
+    {% endif %}
+    {% if Full_Width%}
+        max-width: 100%;
+    {% endif %} 
+    {% case Text_Align %}
+        {% when opt_2 %}
+        text-align: center;
+        {% when opt_3 %}
+        text-align: justify;
+        {% when opt_4 %}
+        text-align: right;
+        {% else %}
+        text-align: left;
+    {% endcase %}
+    }
+    #{{block.id}} .btn {
+        {% if Button_Color %}
+            color: {{ Button_Color }}; 
+            background-color: #fff;
+            border: solid 1px {{ Button_Color }};
+        {% else %}
+            color: #000;
+            background-color: #fff;
+            border: solid 1px #000;
+        {% endif %}
+    }
+    {% if Narrow_Width %}
+    @media (min-width: 768px) {
+        #{{block.id}} .block-content {
+            width: 80%;
+            margin: 0 auto;
+        }
+    }
+    {% endif %}
+{% endstyle %}
+
+<section class="block-container">
+        <div class="block-content">
+            {% if Header %}
+                <h2>{{Header}}</h2>
+            {% endif %}
+            {% if Text %}
+                <div class="mx-auto text-field">{{Text}}</div>
+            {% endif %}
+            {% if Show_Button %}
+                    <a class="btn" href="{{Button_Link.url}}" {% if Button_Link.new_tab %} target="_blank" rel="noopener noreferrer" {% endif %}>
+                        {{Button_Text}}
+                    </a>
+                </div>
+            {% endif %}
+        </div>
+    </div>
+</section>
