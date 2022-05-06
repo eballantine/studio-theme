@@ -1,12 +1,4 @@
 { 
-  "one-col-text": {
-    "name": "Text",
-    "category": "Content"
-  },
-  "featured-products": {
-    "name": "Featured Products",
-    "category": "Display Experiences"
-  },
   "hero-image": {
     "name": "Hero Image",
     "category": "Hero"
@@ -15,36 +7,44 @@
     "name": "Hero Theme Graphic",
     "category": "Hero"
   },
-  "image-grid": {
-    "name": "Image Grid",
+  "one-col-text": {
+    "name": "Text",
     "category": "Content"
   },
-  "newsletter-signup": {
-    "name": "Newsletter Sign Up",
-    "category": "Marketing"
+  "two-col-text-text": {
+    "name": "Two Column Text",
+    "category": "Content"
   },
   "one-col-img": {
     "name": "Image",
     "category": "Content"
   },
-  "one-col-vid": {
-    "name": "Video",
-    "category": "Content"
-  },
-  "product-carousel": {
-    "name": "Product Carousel",
-    "category": "Content"
-  },
   "two-col-img-img": {
-    "name": "Two Images",
+    "name": "Two Coloumn Images",
     "category": "Content"
   },
   "two-col-img-text": {
     "name": "Image and Text",
     "category": "Content"
   },
-  "two-col-text-text": {
-    "name": "Two Column Text",
+  "one-col-vid": {
+    "name": "Video",
     "category": "Content"
+  },
+  "image-grid": {
+    "name": "Image Grid",
+    "category": "Content"
+  },
+  "product-carousel": {
+    "name": "Product Carousel",
+    "category": "Display Experiences"
+  },
+  "featured-products": {
+    "name": "Featured Products",
+    "category": "Display Experiences"
+  },
+  "newsletter-signup": {
+    "name": "Newsletter Sign Up",
+    "category": "Marketing"
   }
 }
