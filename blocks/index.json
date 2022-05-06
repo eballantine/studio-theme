@@ -1,6 +1,50 @@
 {
-  "example": {
-    "name": "Example block",
-    "category": "Text"
+  "featured-products": {
+    "name": "Featured Products",
+    "category": "Display Experiences"
+  },
+  "hero-image": {
+    "name": "Hero Image",
+    "category": "Hero"
+  },
+  "hero-theme-graphic": {
+    "name": "Hero Theme Graphic",
+    "category": "Hero"
+  },
+  "image-grid": {
+    "name": "Image Grid",
+    "category": "Content"
+  },
+  "newsletter-signup": {
+    "name": "Newsletter Sign Up",
+    "category": "Marketing"
+  },
+  "one-col-img": {
+    "name": "Image",
+    "category": "Content"
+  },
+  "one-col-text": {
+    "name": "Text",
+    "category": "Content"
+  },
+  "one-col-vid": {
+    "name": "Video",
+    "category": "Content"
+  },
+  "product-carousel": {
+    "name": "Product Carousel",
+    "category": "Content"
+  },
+  "two-col-img-img": {
+    "name": "Two Images",
+    "category": "Content"
+  },
+  "two-col-img-text": {
+    "name": "Image and Text",
+    "category": "Content"
+  },
+  "two-col-text-text": {
+    "name": "Two Column Text",
+    "category": "Content"
   }
 }
