@@ -1,0 +1,93 @@
+---
+Background_Image:
+    group: design
+    label: Background image
+    hint: Recommended minimum width 1920px.
+    type: Image
+Background_Color:
+    group: design
+    label: Background colour
+    type: color
+    default:
+        palette: body-background
+Text_Color:
+    group: design
+    label: Text colour
+    type: color
+    default:
+        palette: body-color
+Button_Color:
+    group: design
+    label: Button colour
+    type: color
+    default:
+        palette: primary
+Image:
+    group: content
+    label: Image
+    hint: Recommended minimum width 1920px. We will resize and optimise to ensure the fastest possible page load, so you don't need to worry about an image being too big. 
+    type: Image
+    default:
+       asset: images/chair.jpg
+Mobile_Image:
+    group: mobile
+    label: Mobile Image
+    hint: Show a different image on mobile devices. Recommended minimum width 640px. We will resize and optimise to ensure the fastest possible page load, so you don't need to worry about an image being too big. 
+    type: Image
+Full_Width_Image:
+    group: layout
+    label: Increase image size
+    type: Boolean
+Header:
+    group: content
+    label: Header
+    type: String
+    default: Breathe in. Breathe out.
+Text:
+    group: content
+    label: Text
+    type: Text
+    default: <p>Creating experiences is an art. Whether you’re launching a new idea to share your passion with the world, or taking your business to the next level, no matter what you are building – carefully craft every moment of your story online. Brands built with love are the ones that stand out.</p>
+Show_Button:
+    group: content
+    label: Display button
+    type: Boolean
+Button_Text:
+    group: content
+    label: Button text
+    type: String
+    default: Learn more
+Button_Link:
+    group: content
+    label: Button link
+    type: link
+padding_top:
+    group: design
+    label: Block padding top
+    type: range
+    min: 0
+    max: 500
+    step: 10
+    default: 80
+    unit: px
+padding_bottom:
+    group: design
+    label: Block padding bottom
+    type: range
+    min: 0
+    max: 500
+    step: 10
+    default: 80
+    unit: px
+---
+
+{% style %}
+    #{{block.id}} .block-container {
+        padding-top: {{padding_top}}px;
+        padding-bottom: {{padding_bottom}}px;
+    }
+{% endstyle %}
+
+<section class="block-container single-image">
+    <img src="{{Image.xxlarge_url}}">
+</section>
