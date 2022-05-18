@@ -42,13 +42,13 @@ padding_bottom:
     unit: px
 ---
 
-{% style %}
+<style>
     #{{block.id}} .block-container {
         padding-top: {{padding_top}}px;
         padding-bottom: {{padding_bottom}}px;
         background-color: {{Background_Color.hex}};
     }
-{% endstyle %}
+</style>
 
 <section class="block-container single-image-container">
     <picture class="single-image">
