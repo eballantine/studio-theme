@@ -20,7 +20,7 @@ Mobile_Image:
 Image_Alt:
     group: content
     label: Image Alt text
-    hint: Alternative text that will show if the image (or mobile image) fails to load, or if someone is viewing the page with a screen reader. Do not include any alt text if the image is only decorative. For more guidance read <a href="">Easol's guide to alt text</a>
+    hint: Alternative text that will show if the image (or mobile image) fails to load, or if someone is viewing the page with a screen reader. Do not include any alt text if the image is only decorative. For more guidance read???
     type: Text
 padding_top:
     group: design
@@ -52,7 +52,7 @@ padding_bottom:
 
 <section class="block-container single-image-container">
     <picture class="single-image">
-        {% if Mobile_Image %}
+        <!-- {% if Mobile_Image %}
             <source srcset="{{Mobile_Image.medium_url}}" media="(min-width: 720px)">
             <source srcset="{{Mobile_Image.small_url}}" media="(min-width: 540px)">
             <source srcset="{{Mobile_Image.thumbnail_url}}" media="(min-width: 405px)">
@@ -63,6 +63,7 @@ padding_bottom:
         <source srcset="{{Image.medium_url}}" media="(min-width: 720px)">
         <source srcset="{{Image.small_url}}" media="(min-width: 540px)">
         <source srcset="{{Image.thumbnail_url}}" media="(min-width: 405px)">
-        <img src="{{Image.xxlarge_url}}" alt="{{Image_Alt}}">
+        <img src="{{Image.xxlarge_url}}" alt="{{Image_Alt}}"> -->
+        <img src="{{Image.xxlarge_url}}" {%if Image_Alt%}alt="{{Image_Alt}}{%endif%}">
     </picture>
 </section>
